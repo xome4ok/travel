@@ -17,19 +17,32 @@ const Gallery = (folderId, pattern = null) => () => (
 );
 
 const Home = () => (
-  <div>
+  <section>
     <ReactMarkdown source={'# Это заголовок\n\nА это - обычный **текст**.'}/>
-  </div>
+  </section>
 );
 
 const Photo = () => (
-  <div>
-    <ReactMarkdown source={'# Photo'}/>
+  <section>
+    <ReactMarkdown source={'# Фото'}/>
     <ul>
       {Object.entries(photoFolders).map(
         ([route, {name, args}]) => <li key={route}><Link to={`/photo/${route}`}>{name}</Link></li>
       )}
     </ul>
+  </section>
+);
+
+const Header = () => (
+  <div className='app-header'>
+  <ul>
+    <li>
+      <Link to="/">Домой</Link>
+    </li>
+    <li>
+      <Link to="/photo">Фото</Link>
+    </li>
+  </ul>
   </div>
 );
 
@@ -37,16 +50,8 @@ class App extends Component {
 
   render() {
     return (
-       <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/photo">Photo</Link>
-          </li>
-        </ul>
-        
+       <article id='app'>
+        <Header />
         <Route exact path="/" component={Home} />
         <Route path="/photo" component={Photo} />
         {
@@ -60,7 +65,7 @@ class App extends Component {
               />
           )
         }
-      </div>
+      </article>
     );
   }
 }
