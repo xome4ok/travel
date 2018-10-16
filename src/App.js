@@ -27,7 +27,7 @@ const Photo = () => (
     <ReactMarkdown source={'# Photo'}/>
     <ul>
       {Object.entries(photoFolders).map(
-        ([url, {name, args}]) => <li key={url}><Link to={url}>{name}</Link></li>
+        ([route, {name, args}]) => <li key={route}><Link to={`/photo/${route}`}>{name}</Link></li>
       )}
     </ul>
   </div>
