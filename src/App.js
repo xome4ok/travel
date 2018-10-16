@@ -1,25 +1,65 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Route, Link } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
+
+import GoogleDriveGallery from './GoogleDriveGallery';
+
 import './App.css';
 
+import { photoFolders, consts } from './data';
+
+const Gallery = (folderId, pattern = null) => () => (
+  <GoogleDriveGallery
+    googleApiKey={consts.GOOGLE_API_KEY}
+    folderId={folderId}
+    pattern={pattern}
+  />
+);
+
+const Home = () => (
+  <div>
+    <ReactMarkdown source={'# Это заголовок\n\nА это - обычный **текст**.'}/>
+  </div>
+);
+
+const Photo = () => (
+  <div>
+    <ReactMarkdown source={'# Photo'}/>
+    <ul>
+      {Object.entries(photoFolders).map(
+        ([url, {name, args}]) => <li key={url}><Link to={url}>{name}</Link></li>
+      )}
+    </ul>
+  </div>
+);
+
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+       <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/photo">Photo</Link>
+          </li>
+        </ul>
+        
+        <Route exact path="/" component={Home} />
+        <Route path="/photo" component={Photo} />
+        {
+          Object.entries(photoFolders).map(
+            ([route, {name, args}]) => 
+              <Route
+                exact
+                path={`/photo/${route}`}
+                component={Gallery(...args)}
+                key={route}
+              />
+          )
+        }
       </div>
     );
   }

@@ -26,6 +26,9 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "react-images": "^0.5.19",
+    "react-markdown": "^4.0.3",
+    "react-router-dom": "^4.3.1"
   }
 }
