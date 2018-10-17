@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/travel/static/media/et-book-bold-line-figures.1c130d09.woff"
   },
   {
-    "revision": "2216d47f536e2f909e26",
-    "url": "/travel/static/css/main.18c18733.chunk.css"
+    "revision": "56228c5a450eff328ec7",
+    "url": "/travel/static/css/main.7a3188fa.chunk.css"
   },
   {
-    "revision": "8b93996cd96dc92f149d",
-    "url": "/travel/static/js/1.8b93996c.chunk.js"
+    "revision": "7714e28f087be8154dce",
+    "url": "/travel/static/js/1.7714e28f.chunk.js"
   },
   {
     "revision": "6be875f181a91d5feca1",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/travel/static/media/et-book-display-italic-old-style-figures.43eb7a34.woff"
   },
   {
-    "revision": "2216d47f536e2f909e26",
-    "url": "/travel/static/js/main.2216d47f.chunk.js"
+    "revision": "56228c5a450eff328ec7",
+    "url": "/travel/static/js/main.56228c5a.chunk.js"
   },
   {
     "revision": "b1b6ddd0b0609c451978017ef81d11b9",
@@ -72,15 +72,15 @@ self.__precacheManifest = [
     "url": "/travel/static/media/et-book-roman-line-figures.f5cdc02e.svg"
   },
   {
-    "revision": "13c073673fed13df2e115720aa3de09a",
-    "url": "/travel/static/media/et-book-bold-line-figures.13c07367.svg"
-  },
-  {
     "revision": "3885093b224ae98aa11a95c8882f1177",
     "url": "/travel/static/media/et-book-roman-old-style-figures.3885093b.svg"
   },
   {
-    "revision": "74960fd44a739fef20e749abafb0b188",
+    "revision": "13c073673fed13df2e115720aa3de09a",
+    "url": "/travel/static/media/et-book-bold-line-figures.13c07367.svg"
+  },
+  {
+    "revision": "66d7dcbe321673a1e938a626f66de41d",
     "url": "/travel/index.html"
   }
 ];
