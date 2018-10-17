@@ -25,15 +25,16 @@ export default class GoogleDriveGallery extends Component {
     )
   }
 
-  async getImagesList(folderId, googleApiKey, pattern=null, pageSize=1000) {
+  async getImagesList(folderId, googleApiKey, pattern=null, pageSize=1000, orderBy='name') {
     try {
       this.setState({loading: true});
       const query = `'${folderId}'+in+parents+and+mimeType+contains+'image/'` + (pattern ? `+and+name+contains+'${pattern}'` : '')
-      const QUERY_URL = `https://www.googleapis.com/drive/v3/files?q=${query}&pageSize=${pageSize}&key=${googleApiKey}`;
+      const QUERY_URL = `https://www.googleapis.com/drive/v3/files?q=${query}&orderBy=${orderBy}&pageSize=${pageSize}&key=${googleApiKey}`;
       const images = [];
       let nextPageToken = true;
       while (nextPageToken) {
-        const response = await fetch(QUERY_URL);
+        const NEXT_PAGE_URL = QUERY_URL + (nextPageToken === true || !nextPageToken ? '' : `&pageToken=${nextPageToken}`);
+        const response = await fetch(NEXT_PAGE_URL);
         const json = await response.json();
         images.push(...json['files'].map(({id, name}) => {return {id, name};}));
         nextPageToken = json['nextPageToken'];
@@ -76,7 +77,7 @@ export default class GoogleDriveGallery extends Component {
       this.state.error ?
 
         <div className='error'>Error loading gallery!</div> :
-
+      
       <Lightbox
         images={this.state.imagesList}
         isOpen={this.state.isOpen}

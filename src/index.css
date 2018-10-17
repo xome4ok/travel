@@ -1,3 +1,1 @@
-#app * {
-    @import 'libs/tufte-css/tufte.css';
-}
+@import 'libs/tufte-css/tufte.css';
