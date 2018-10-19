@@ -6,7 +6,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import GoogleDriveGallery from './GoogleDriveGallery';
-import Markdown from './Markdown';
+import { Markdown } from './Markdown';
 
 import './App.css';
 

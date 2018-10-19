@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown/with-html';
 
 export default class Markdown extends Component {
   state = {
