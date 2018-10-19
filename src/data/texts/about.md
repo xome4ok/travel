@@ -1,1 +1,0 @@
-##### Фавиконка взята у [Freepik](http://www.freepik.com) на сайте [www.flaticon.com](https://www.flaticon.com/) и используется под лицензией [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
