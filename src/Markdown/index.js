@@ -1,4 +1,2 @@
 import Markdown from './Markdown';
-export {
-    Markdown,
-};
+export default Markdown;

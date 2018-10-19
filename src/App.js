@@ -6,11 +6,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import GoogleDriveGallery from './GoogleDriveGallery';
-import { Markdown } from './Markdown';
+import Markdown from './Markdown';
 
 import './App.css';
 
-import { photoFolders, consts, articles } from './data';
+import { photos, consts, articles } from './data';
 import { homeText, aboutText } from './data';
 
 
@@ -58,7 +58,9 @@ const Header = () => (
       </h1>
       </div>
       <div className='right-header-block'>
-        <a href='https://github.com/xome4ok/travel' className='link-icon'><FontAwesomeIcon icon={faGithub}/></a>
+        <a href='https://github.com/xome4ok/travel' className='link-icon'>
+          <FontAwesomeIcon icon={faGithub}/>
+        </a>
       </div>
     </nav>
     <hr/>
@@ -74,7 +76,7 @@ const Photo = withRouter(
   ({location, match, history, staticContext, ...rest}) => (
     <section>
       <ul>
-        {Object.entries(photoFolders).map(
+        {Object.entries(photos).map(
           ([route, {name, props}]) => 
             <li key={route}>
               <Link to={`/photo/${route}`}>{name}</Link>
