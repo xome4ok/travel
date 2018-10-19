@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/travel/static/media/et-book-display-italic-old-style-figures.43eb7a34.woff"
   },
   {
-    "revision": "48dca242361e5635bbe7",
+    "revision": "06a31a881f695064de47",
     "url": "/travel/static/css/main.cdca5a58.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/travel/static/media/home.45935d39.md"
   },
   {
-    "revision": "69efd72eb6b19baaf2b924171ede7164",
-    "url": "/travel/static/media/about.69efd72e.md"
+    "revision": "d41d8cd98f00b204e9800998ecf8427e",
+    "url": "/travel/static/media/about.d41d8cd9.md"
   },
   {
     "revision": "962421dcb421eee731c285340a7ef7d0",
@@ -32,12 +32,12 @@ self.__precacheManifest = [
     "url": "/travel/static/media/et-book-roman-line-figures.b19f46f3.eot"
   },
   {
-    "revision": "7ed918f3e796962afd05f4a02fb3f84f",
-    "url": "/travel/static/media/et-book-bold-line-figures.7ed918f3.eot"
-  },
-  {
     "revision": "a47b89787a4f7491180c40ec69d57998",
     "url": "/travel/static/media/et-book-display-italic-old-style-figures.a47b8978.eot"
+  },
+  {
+    "revision": "7ed918f3e796962afd05f4a02fb3f84f",
+    "url": "/travel/static/media/et-book-bold-line-figures.7ed918f3.eot"
   },
   {
     "revision": "fc7b0f1d982d0029eacba5dd89bf8562",
@@ -48,8 +48,8 @@ self.__precacheManifest = [
     "url": "/travel/static/media/et-book-roman-line-figures.10d6df6a.woff"
   },
   {
-    "revision": "48dca242361e5635bbe7",
-    "url": "/travel/static/js/main.48dca242.chunk.js"
+    "revision": "06a31a881f695064de47",
+    "url": "/travel/static/js/main.06a31a88.chunk.js"
   },
   {
     "revision": "1c130d09324dbeb3ba2e5a2f9d788a6f",
@@ -80,10 +80,6 @@ self.__precacheManifest = [
     "url": "/travel/static/media/et-book-display-italic-old-style-figures.0692c038.svg"
   },
   {
-    "revision": "13c073673fed13df2e115720aa3de09a",
-    "url": "/travel/static/media/et-book-bold-line-figures.13c07367.svg"
-  },
-  {
     "revision": "f5cdc02ed1cefd2255d254a77c64b7bd",
     "url": "/travel/static/media/et-book-roman-line-figures.f5cdc02e.svg"
   },
@@ -92,7 +88,11 @@ self.__precacheManifest = [
     "url": "/travel/static/media/et-book-roman-old-style-figures.3885093b.svg"
   },
   {
-    "revision": "3bb6be784cb826f58c169f2fe2b5ffa8",
+    "revision": "13c073673fed13df2e115720aa3de09a",
+    "url": "/travel/static/media/et-book-bold-line-figures.13c07367.svg"
+  },
+  {
+    "revision": "b54ac1534dfd1469d649e875b246ede7",
     "url": "/travel/index.html"
   }
 ];
