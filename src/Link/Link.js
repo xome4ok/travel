@@ -25,7 +25,7 @@ export default class Link extends React.Component {
     if (isInternal) {
       return (<ReactLink to={to} {...rest}>{children}</ReactLink>);
     } else {
-      return (<a href={to} target="_blank" {...rest}>{children}</a>);
+      return (<a href={to} target="_blank" rel="noopener noreferrer" {...rest}>{children}</a>);
     }
   }
 }

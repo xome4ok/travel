@@ -16,8 +16,15 @@ import { homeText, aboutText } from './data';
 
 
 const MarkdownPage = (text) => () => (
-  <Markdown source={text} />
+  <section>
+    <Markdown source={text} />
+  </section>
 );
+
+const Text = withRouter(
+  ({location, match, history, staticContext, ...rest}) => (
+    MarkdownPage(articles[match.params.text])()
+));
 
 const Gallery = withRouter(({history, folderId, pattern = null}) => (
   <GoogleDriveGallery
@@ -67,11 +74,6 @@ const Header = () => (
     <hr/>
   </header>
 );
-
-const Text = withRouter(
-  ({location, match, history, staticContext, ...rest}) => (
-    <Markdown source={articles[match.params.text]} />
-));
 
 const Photo = withRouter(
   ({location, match, history, staticContext, ...rest}) => (

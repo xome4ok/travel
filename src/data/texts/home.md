@@ -1,1 +1,1 @@
-[О слонах](/texts/ganesh)
+[О слонах](texts/ganesh)
