@@ -10,7 +10,7 @@ import { Markdown } from './Markdown';
 
 import './App.css';
 
-import { photoFolders, consts, textPaths } from './data';
+import { photoFolders, consts, articles } from './data';
 import { homeText, aboutText } from './data';
 
 
@@ -67,7 +67,7 @@ const Header = () => (
 
 const Text = withRouter(
   ({location, match, history, staticContext, ...rest}) => (
-    <Markdown source={textPaths[match.params.text]} />
+    <Markdown source={articles[match.params.text]} />
 ));
 
 const Photo = withRouter(

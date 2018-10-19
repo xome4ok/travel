@@ -3,7 +3,7 @@ import consts from './consts';
 
 import homeText from './texts/home.md';
 import aboutText from './texts/about.md';
-import textPaths from './textPaths';
+import articles from './articles';
 
 export {
     photoFolders,
@@ -12,5 +12,5 @@ export {
     // texts
     homeText,
     aboutText,
-    textPaths,
+    articles,
 };
