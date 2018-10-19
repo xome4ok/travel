@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, withRouter } from 'react-router-dom';
+import { Route, Switch, Link, withRouter } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -10,37 +10,26 @@ import { Markdown } from './Markdown';
 
 import './App.css';
 
-import { photoFolders, consts } from './data';
+import { photoFolders, consts, textPaths } from './data';
 import { homeText, aboutText } from './data';
 
 
-const Gallery = (folderId, pattern = null) => () => (
+const MarkdownPage = (text) => () => (
+  <Markdown source={text} />
+);
+
+const Gallery = withRouter(({history, folderId, pattern = null}) => (
   <GoogleDriveGallery
     googleApiKey={consts.GOOGLE_API_KEY}
     folderId={folderId}
     pattern={pattern}
+    onClose={() => history.push('/photo')}
   />
-);
-
-const Home = () => (
-  <section>
-    <Markdown source={homeText}/>
-  </section>
-);
-
-const Photo = () => (
-  <section>
-    <ul>
-      {Object.entries(photoFolders).map(
-        ([route, {name, args}]) => <li key={route}><Link to={`/photo/${route}`}>{name}</Link></li>
-      )}
-    </ul>
-  </section>
-);
+));
 
 const NavigationLink = withRouter(
   ({location, match, history, staticContext, ...props}) => (
-    location.pathname === props.to ?
+    location.pathname.startsWith(props.to) ?
       <Link className='active' {...props}/>:
       <Link {...props}/>
   )
@@ -64,7 +53,6 @@ const Header = () => (
         <Link to='/'>xome4ok/travel</Link>
         <div className='navlinks'>
           <NavigationLink to='/photo'>photo</NavigationLink>
-          <NavigationLink to='/text'>text</NavigationLink>
           <NavigationLink to='/about'>about</NavigationLink>
         </div>
       </h1>
@@ -77,30 +65,37 @@ const Header = () => (
   </header>
 );
 
-const About = () => (
-  <section>
-    <Markdown source={aboutText}/>
-  </section>  
-);
+const Text = withRouter(
+  ({location, match, history, staticContext, ...rest}) => (
+    <Markdown source={textPaths[match.params.text]} />
+));
+
+const Photo = withRouter(
+  ({location, match, history, staticContext, ...rest}) => (
+    <section>
+      <ul>
+        {Object.entries(photoFolders).map(
+          ([route, {name, props}]) => 
+            <li key={route}>
+              <Link to={`/photo/${route}`}>{name}</Link>
+              {match.params.gallery === route ? <Gallery {...props} /> : null}
+            </li>
+        )}
+      </ul>
+    </section>
+));
 
 const App = () => (
   <div>
   <Header />
   <article id='app'>
-    <Route exact path='/' component={Home} />
-    <Route path='/photo' component={Photo} />
-    <Route path='/about' component={About} />
-    {
-      Object.entries(photoFolders).map(
-        ([route, {name, args}]) => 
-          <Route
-            exact
-            path={`/photo/${route}`}
-            component={Gallery(...args)}
-            key={route}
-          />
-      )
-    }
+    <Route exact path='/' component={MarkdownPage(homeText)} />
+    <Route exact path='/about' component={MarkdownPage(aboutText)} />
+    <Route path='/texts/:text' component={Text} />
+    <Switch>
+      <Route path='/photo/:gallery' component={Photo} />
+      <Route path='/photo' component={Photo} />
+    </Switch>
   </article>
   </div>
 );

@@ -68,6 +68,13 @@ export default class GoogleDriveGallery extends Component {
     });
   }
 
+  close() {
+    if ('onClose' in this.props) {
+      this.props.onClose();
+    }
+    this.setState({isOpen: false});
+  }
+
   render() {
     return (
       this.state.loading ?
@@ -81,7 +88,7 @@ export default class GoogleDriveGallery extends Component {
       <Lightbox
         images={this.state.imagesList}
         isOpen={this.state.isOpen}
-        onClose={() => this.setState({isOpen: false})}
+        onClose={() => this.close()}
         onClickPrev={() => this.gotoPrevious()}
         onClickNext={() => this.gotoNext()}
         imageCountSeparator='/'
