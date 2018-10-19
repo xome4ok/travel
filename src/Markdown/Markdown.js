@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
+
 import ReactMarkdown from 'react-markdown/with-html';
+
+import Link from '../Link';
+
+const linkRenderer = (props) => (
+  <Link to={props.href}>{props.children}</Link>
+);
 
 export default class Markdown extends Component {
   state = {
@@ -33,6 +40,7 @@ export default class Markdown extends Component {
       <ReactMarkdown
         source={this.state.text}
         escapeHtml={false}
+        renderers={{link: linkRenderer}}
       />
     );
   }

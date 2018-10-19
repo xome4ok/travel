@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Link, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -7,6 +7,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import GoogleDriveGallery from './GoogleDriveGallery';
 import Markdown from './Markdown';
+import Link from './Link';
 
 import './App.css';
 
@@ -58,9 +59,9 @@ const Header = () => (
       </h1>
       </div>
       <div className='right-header-block'>
-        <a href='https://github.com/xome4ok/travel' className='link-icon'>
+        <Link to='https://github.com/xome4ok/travel' className='link-icon'>
           <FontAwesomeIcon icon={faGithub}/>
-        </a>
+        </Link>
       </div>
     </nav>
     <hr/>
