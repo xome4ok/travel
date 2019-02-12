@@ -79,11 +79,11 @@ export default class GoogleDriveGallery extends Component {
     return (
       this.state.loading ?
          
-        <div className='loading'>Loading...</div> :
+        <span className='loading'> Loading...</span> :
          
       this.state.error ?
 
-        <div className='error'>Error loading gallery!</div> :
+        <span className='error'> Error loading gallery!</span> :
       
       <Lightbox
         images={this.state.imagesList}
