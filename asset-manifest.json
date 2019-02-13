@@ -1,17 +1,17 @@
 {
   "main.css": "/travel/static/css/main.bf9c82b0.chunk.css",
-  "main.js": "/travel/static/js/main.eb075c4e.chunk.js",
-  "main.js.map": "/travel/static/js/main.eb075c4e.chunk.js.map",
+  "main.js": "/travel/static/js/main.1be05c22.chunk.js",
+  "main.js.map": "/travel/static/js/main.1be05c22.chunk.js.map",
   "static/js/1.59268398.chunk.js": "/travel/static/js/1.59268398.chunk.js",
   "static/js/1.59268398.chunk.js.map": "/travel/static/js/1.59268398.chunk.js.map",
   "runtime~main.js": "/travel/static/js/runtime~main.6be875f1.js",
   "runtime~main.js.map": "/travel/static/js/runtime~main.6be875f1.js.map",
-  "static/media/index.css": "/travel/static/media/et-book-roman-old-style-figures.3885093b.svg",
+  "static/media/index.css": "/travel/static/media/et-book-display-italic-old-style-figures.a47b8978.eot",
   "static/media/home.md": "/travel/static/media/home.e3e29800.md",
   "static/media/ganesh.md": "/travel/static/media/ganesh.54a21b76.md",
   "static/media/about.md": "/travel/static/media/about.d41d8cd9.md",
   "static/css/main.bf9c82b0.chunk.css.map": "/travel/static/css/main.bf9c82b0.chunk.css.map",
   "index.html": "/travel/index.html",
-  "precache-manifest.0071d53ec7750c67fdb5fdd17d78b9a4.js": "/travel/precache-manifest.0071d53ec7750c67fdb5fdd17d78b9a4.js",
+  "precache-manifest.456f81b2cf6d50583ff19b639bc472c9.js": "/travel/precache-manifest.456f81b2cf6d50583ff19b639bc472c9.js",
   "service-worker.js": "/travel/service-worker.js"
 }

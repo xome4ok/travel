@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "43eb7a3417177f8f0fff766082379da5",
-    "url": "/travel/static/media/et-book-display-italic-old-style-figures.43eb7a34.woff"
+    "revision": "d6175af437d22f14e7cf64c370adc879",
+    "url": "/travel/static/media/et-book-display-italic-old-style-figures.d6175af4.ttf"
   },
   {
-    "revision": "eb075c4e293d84bb68ae",
+    "revision": "1be05c22fa7136317a79",
     "url": "/travel/static/css/main.bf9c82b0.chunk.css"
   },
   {
@@ -44,16 +44,12 @@ self.__precacheManifest = [
     "url": "/travel/static/media/et-book-roman-line-figures.f5cdc02e.svg"
   },
   {
-    "revision": "a47b89787a4f7491180c40ec69d57998",
-    "url": "/travel/static/media/et-book-display-italic-old-style-figures.a47b8978.eot"
+    "revision": "43eb7a3417177f8f0fff766082379da5",
+    "url": "/travel/static/media/et-book-display-italic-old-style-figures.43eb7a34.woff"
   },
   {
-    "revision": "eb075c4e293d84bb68ae",
-    "url": "/travel/static/js/main.eb075c4e.chunk.js"
-  },
-  {
-    "revision": "d6175af437d22f14e7cf64c370adc879",
-    "url": "/travel/static/media/et-book-display-italic-old-style-figures.d6175af4.ttf"
+    "revision": "1be05c22fa7136317a79",
+    "url": "/travel/static/js/main.1be05c22.chunk.js"
   },
   {
     "revision": "0692c0388390239d27fd414060b46df3",
@@ -72,12 +68,12 @@ self.__precacheManifest = [
     "url": "/travel/static/media/et-book-bold-line-figures.5294d5d5.ttf"
   },
   {
-    "revision": "13c073673fed13df2e115720aa3de09a",
-    "url": "/travel/static/media/et-book-bold-line-figures.13c07367.svg"
-  },
-  {
     "revision": "fc7b0f1d982d0029eacba5dd89bf8562",
     "url": "/travel/static/media/et-book-roman-old-style-figures.fc7b0f1d.eot"
+  },
+  {
+    "revision": "13c073673fed13df2e115720aa3de09a",
+    "url": "/travel/static/media/et-book-bold-line-figures.13c07367.svg"
   },
   {
     "revision": "b1b6ddd0b0609c451978017ef81d11b9",
@@ -92,7 +88,11 @@ self.__precacheManifest = [
     "url": "/travel/static/media/et-book-roman-old-style-figures.3885093b.svg"
   },
   {
-    "revision": "0b9931c97d0acbe2a5759e744db618df",
+    "revision": "a47b89787a4f7491180c40ec69d57998",
+    "url": "/travel/static/media/et-book-display-italic-old-style-figures.a47b8978.eot"
+  },
+  {
+    "revision": "7d95cb4c1c7a42d5632e0c5ba2bf77ba",
     "url": "/travel/index.html"
   }
 ];
