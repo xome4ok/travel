@@ -12,10 +12,16 @@ const linkRenderer = (props) => (
 
 const sidenoteRenderer = (props) => (
   <>
-  <label for={`sn-${sidenoteCounter++}`} className="margin-toggle">
+  <label htmlFor={`sn-${sidenoteCounter}`} className="margin-toggle">
+    ⍰
   </label>
   <input type='checkbox' id={`sn-${sidenoteCounter++}`} className='margin-toggle'/>
-  <span class='marginnote'>{props.children}</span>
+  <span className='marginnote'>
+    <ReactMarkdown
+      source={props.children}
+      renderers={{link: linkRenderer}}
+    />
+  </span>
   </>
 );
 
@@ -25,7 +31,7 @@ export default class Markdown extends Component {
     loading: false,
     error: false,
   }
-  
+
   async fetchText(file) {
     const data = await fetch(file);
     return await data.text();
